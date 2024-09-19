@@ -12,3 +12,9 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+logging:
+  level:
+    root: info
+    org.apache.kafka: debug
+    org.springframework.kafka: debug

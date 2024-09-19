@@ -36,7 +36,23 @@ to start app run:
 
 ### 3. Sending Messages
 
+try with strings:
+
 ```bash
 http://localhost:8080/send?message=HelloKafka
 ```
 
+try with JSON body:
+```bash
+curl -X POST http://localhost:8080/send \
+-H "Content-Type: application/json" \
+-d '{
+  "message": {
+    "nome": "jose",
+    "idade": "51"
+  },
+  "topic": "test-topic-json",
+  "priority": "high",
+  "timestamp": "2024-09-19T12:00:00Z"
+}'
+```
