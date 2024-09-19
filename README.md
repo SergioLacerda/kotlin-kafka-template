@@ -56,3 +56,16 @@ curl -X POST http://localhost:8080/send \
   "timestamp": "2024-09-19T12:00:00Z"
 }'
 ```
+
+
+### Tips
+On Linux, if the Kafka/Docker Compose system cannot find the Docker container, 
+you might see the following error in the console log:
+```
+Kafka Error connecting to node ubuntukafka:9092 (id: 0 rack: null)
+```
+
+To solve this, add this line on file `/etc/hosts`
+```
+127.0.0.1:9092    kafka
+```
